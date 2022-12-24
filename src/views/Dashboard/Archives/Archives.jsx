@@ -10,25 +10,28 @@ import UploadArchiveFile from "../../../components/Auth/UploadArchiveFile";
 import Pagination from "../../../components/Pagination/Pagination";
 
 const Archives = ({
-  archivesPageSwitch,
-  setArchivesPageSwitch,
-  archivesPageSwitch2,
-  setArchivesPageSwitch2,
+  uploadNewFile,
+  setUploadNewFile,
+  uploadNewFile2,
+  setUploadNewFile2,
 }) => {
   return (
     <div className={`${DashboardCSS.file} ${ArchivesCSS.file}`}>
-      {archivesPageSwitch ? (
+      {uploadNewFile ? (
         <>
           <div className={DashboardCSS.header}>
             <div className={DashboardCSS.left}>
               <h3>Archive</h3>
             </div>
             <div className={DashboardCSS.right}>
-              <button onClick={() => setArchivesPageSwitch(false)}>
-                <TiFolderOpen className="folderOpenIcon" style={{marginBottom: 7}}  />
+              <button onClick={() => setUploadNewFile(false)}>
+                <TiFolderOpen
+                  className="folderOpenIcon"
+                  style={{ marginBottom: 7 }}
+                />
                 Create New Archive
               </button>
-              <button>
+              <button onClick={() => setUploadNewFile2(false)}>
                 <Unicons.UilCloudUpload className="icon" />
                 Upload New File / Archive
               </button>
@@ -106,10 +109,13 @@ const Archives = ({
             <Pagination />
           </div>
         </>
-      ) : (
-        <CreateArchives setArchivesPageSwitch={setArchivesPageSwitch} />
-        // <UploadArchiveFile setArchivesPageSwitch={setArchivesPageSwitch} />
-      )}
+      ) : null}
+      {!uploadNewFile ? (
+        <CreateArchives setUploadNewFile={setUploadNewFile} />
+      ) : null}
+      {!uploadNewFile2 ? (
+        <UploadArchiveFile setUploadNewFile2={setUploadNewFile2} />
+      ) : null}
     </div>
   );
 };

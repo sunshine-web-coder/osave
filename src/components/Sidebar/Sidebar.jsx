@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import logoutImg from "../../assets/sidebar/list/logout.png"
 import { sideBarMenu } from "./sideMenuData";
 import * as Unicons from "@iconscout/react-unicons";

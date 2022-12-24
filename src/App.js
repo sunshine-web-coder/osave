@@ -12,7 +12,7 @@ import File from "./views/Dashboard/File/File";
 import Categories from "./views/Dashboard/Categories/Categories";
 import Archives from "./views/Dashboard/Archives/Archives";
 import RecycleBin from "./views/Dashboard/RecycleBin/RecycleBin";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AccountSettings from "./components/Auth/AccountSettings";
 import Notification from "./views/Dashboard/Notification/Notification";
 import useLocalStorage from "./components/localStorageHook";
@@ -20,7 +20,8 @@ import NotFound from "./views/NotFound/NotFound";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useLocalStorage('is-logged-in', false);
-  const [archivesPageSwitch, setArchivesPageSwitch] = useState(true);
+  const [uploadNewFile, setUploadNewFile] = useState(true);
+  const [uploadNewFile2, setUploadNewFile2] = useState(true);
   const [openMenu, setOpenMenu] = useState(false);
   const handleToggle = () => {
     setIsLoggedIn(!isLoggedIn);
@@ -39,7 +40,10 @@ function App() {
           <Route path="/dashboard" element={ <Dashboard openMenu={openMenu} setOpenMenu={setOpenMenu} setIsLoggedIn={setIsLoggedIn} /> }>
             <Route path="files" exact element={<File />} />
             <Route path="categories" element={<Categories />} />
-            <Route path="archives" element={ <Archives archivesPageSwitch={archivesPageSwitch} setArchivesPageSwitch={setArchivesPageSwitch} />}/>
+            <Route path="archives" element={ <Archives 
+            uploadNewFile={uploadNewFile} setUploadNewFile={setUploadNewFile} 
+            uploadNewFile2={uploadNewFile2} setUploadNewFile2={setUploadNewFile2}
+            />}/>
             <Route path="recycle-bin" element={<RecycleBin />} />
             <Route path="account-settings" element={<AccountSettings />} />
             <Route path="notifications" element={<Notification />} />

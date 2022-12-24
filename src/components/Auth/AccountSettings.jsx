@@ -6,7 +6,7 @@ import * as Unicons from '@iconscout/react-unicons';
 import { accountSettingsData } from "../data";
 
 const AccountSettings = ({ submitForm }) => {
-  const [picture, setPicture] = useState(null);
+  const [setPicture] = useState(null);
   const [imgData, setImgData] = useState(null);
   const onChangePicture = (e) => {
     if (e.target.files[0]) {

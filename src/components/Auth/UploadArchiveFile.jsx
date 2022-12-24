@@ -2,7 +2,7 @@ import React from "react";
 import uploadImg from "../../assets/uploadImg.png";
 import UploadArchiveFileCSS from "./Form.module.scss";
 
-const UploadArchiveFile = ({ setArchivesPageSwitch }) => {
+const UploadArchiveFile = ({ setUploadNewFile2 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -14,7 +14,7 @@ const UploadArchiveFile = ({ setArchivesPageSwitch }) => {
           <div className={UploadArchiveFileCSS.UploadArchiveFooter}>
             <h4>No File found Please Upload Your Files</h4>
 
-            <button onClick={() => setArchivesPageSwitch(true)}>Cancel</button>
+            <button onClick={() => setUploadNewFile2(true)}>Cancel</button>
             <button>
               <svg
                 width="19"

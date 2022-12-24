@@ -3,7 +3,7 @@ import DashboardCSS from "../../views/Dashboard/Dashboard.module.scss";
 import { TiFolderOpen } from "react-icons/ti";
 import CreateArchivesCSS from "./Form.module.scss";
 
-const CreateArchives = ({ setArchivesPageSwitch }) => {
+const CreateArchives = ({ setUploadNewFile }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -29,7 +29,7 @@ const CreateArchives = ({ setArchivesPageSwitch }) => {
             <textarea name="" />
           </div>
           <div className={CreateArchivesCSS.fCreateArchive}>
-            <button onClick={() => setArchivesPageSwitch(true)}>Cancel</button>
+            <button onClick={() => setUploadNewFile(true)}>Cancel</button>
             <button>
               <TiFolderOpen className="folderOpenIcon" />
               Create New Archive
