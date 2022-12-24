@@ -1,0 +1,82 @@
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe0eb;
+  margin-bottom: 39px;
+}
+
+.tabs button {
+  background-color: lightgray;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 7.5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #263238;
+}
+
+.tabs button:disabled {
+  background: #ffffff;
+  border-bottom: 2px solid #4378db;
+}
+
+.title {
+  color: black;
+  font-size: medium;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tabsContent {
+  background-color: white;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.tabsContent,
+button {
+  font-size: 15px;
+}
+
+.tabMenu {
+  border-bottom: 1px solid #dfe0eb;
+  padding-left: 16px;
+  padding-right: 38px;
+  margin-bottom: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    background-color: transparent;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #263238;
+    border: none;
+    outline: none;
+    padding-bottom: 7.5px;
+
+  }
+
+  .activeButton{
+    border-bottom: 3px solid #4378DB;
+  }
+
+  @media screen and (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    button{
+      font-size: 15px;
+    }
+  }
+}

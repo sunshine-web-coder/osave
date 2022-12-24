@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #28293d;
+  width: 519px;
+
+  @media screen and (max-width: 550px) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 100%;
+  }
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #28293d;
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.form_terms_field {
+  .agreeTerms {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~ .checkmark {
+        background-color: #2196f3;
+      }
+
+      &:checked ~ .checkmark:after {
+        display: block;
+      }
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+
+      &:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    &:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.css-19kzrtu {
+  padding: 0px !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  text-transform: initial !important;
+  font-family: "Lato" !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  text-align: center !important;
+  color: #263238 !important;
+}
+
+button {
+  cursor: pointer;
+}
+.umuj {
+  display: flex;
+  width: 100%;
+  border: 1px solid red;
+}
+.jsjd {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar {
+    padding-left: 0 !important;
+  }
+  .css-pdct74-MuiTablePagination-selectLabel,
+  .css-16c50h-MuiInputBase-root-MuiTablePagination-select {
+    display: none !important;
+  }
+}
+
+.icon {
+}
+.deleteIcon {
+  color: #4378db;
+  font-size: 25px;
+  cursor: pointer;
+}
+.folderOpenIcon {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  max-width: 400px !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+
+  @media screen and (max-width: 650px) {
+    width: 90% !important;
+  }
+}
+button.close {
+  border: none;
+  outline: none;
+  -webkit-transition: 3s ease-out;
+  -moz-transition: 3s ease-out;
+  transition: 3s ease-out;
+  background-color: #fff;
+  // border: 1px solid grey;
+}
+button.close:hover {
+  -webkit-transform: rotateZ(720deg);
+  -moz-transform: rotateZ(720deg);
+  transform: rotateZ(720deg);
+}

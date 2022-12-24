@@ -1,0 +1,138 @@
+.auth {
+  padding: 16px;
+  padding-top: 97px;
+  padding-bottom: 206px;
+
+  .inAuth {
+    max-width: 1093px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+
+    &.inAuthFlexStart {
+      align-items: flex-start;
+    }
+
+    .left {
+      width: 469px;
+      .top {
+        .desc {
+          p {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: #555770;
+          }
+        }
+        .title {
+          h1 {
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 60px;
+            color: #4378db;
+
+            @media screen and (max-width: 500px) {
+              font-size: 30px;
+              line-height: 35px;
+            }
+          }
+        }
+        .subtitle {
+          .rSub {
+            max-width: 399px;
+          }
+          .fPwrdSub {
+            width: 533px;
+
+            @media screen and (max-width: 600px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .formContainer {
+        margin-top: 45px;
+
+        .successMsg {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(204, 204, 204, 0.76);
+          top: 0;
+          left: 0;
+          right: 0;
+          padding: 10px;
+          backdrop-filter: blur(5px);
+
+          .inSuccessMsg {
+            max-width: 500px;
+            padding: 30px;
+            padding-bottom: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+
+            .closeX{
+              max-width: 40px;
+              margin: auto;
+              min-height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #94c3cf;
+              border-radius: 50%;
+              color: #ffffff;
+              cursor: pointer;
+              margin-bottom: 15px;
+            }
+
+            a {
+              font-family: "Lato";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 24px;
+              text-align: center;
+              max-width: 242px;
+              margin: auto;
+              margin-top: 20px;
+              height: 48px;
+              display: block;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #4378db;
+              box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04),
+                0px 2px 4px rgba(96, 97, 112, 0.16);
+              border-radius: 50px;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 492.16px;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 50px;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+    }
+  }
+}

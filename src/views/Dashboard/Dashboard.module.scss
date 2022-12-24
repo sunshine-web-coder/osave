@@ -1,0 +1,249 @@
+.dashboard {
+  margin-top: 85px;
+  .inDashboard {
+    display: flex;
+    gap: 15px;
+
+    .dSidebar {
+      width: 247px;
+    }
+
+    .dContent {
+      width: 100%;
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+      margin-right: 16px;
+      background: #ffffff;
+      border: 1px solid #dfe0eb;
+      border-radius: 8px;
+
+      .ddhdh {
+        overflow-x: auto;
+
+        .inDdhdh {
+          @media screen and (max-width: 850px) {
+            width: 160px;
+          }
+        }
+      }
+
+      .file {
+        .header {
+          padding: 31px;
+          padding-left: 16px;
+          display: flex;
+          // align-items: center;
+          justify-content: space-between;
+          @media screen and (max-width: 850px) {
+            padding: 16px;
+          }
+          @media screen and (max-width: 500px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+          }
+
+          .left {
+            width: 150px;
+            h3 {
+              font-weight: 700;
+              font-size: 19px;
+              line-height: 23px;
+              letter-spacing: 0.4px;
+              color: #252733;
+            }
+          }
+          .right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 24px;
+            width: 100%;
+
+            button {
+              width: max-content;
+              height: 48px;
+              padding-left: 30px;
+              padding-right: 30px;
+              border: 1px solid #4378db;
+              filter: drop-shadow(0px 0px 1px rgba(40, 41, 61, 0.04))
+                drop-shadow(0px 2px 4px rgba(96, 97, 112, 0.16));
+              border-radius: 50px;
+              font-weight: 500;
+              font-size: 17px;
+              line-height: 24px;
+              color: #4378db;
+              background-color: #ffffff;
+              display: flex;
+              justify-content: center;
+              gap: 5.67px;
+              align-items: center;
+            }
+            @media screen and (max-width: 767px) {
+              gap: 10px;
+              button {
+                height: 35px;
+              }
+            }
+            @media screen and (max-width: 500px) {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 10px;
+              width: 100%;
+
+              button {
+                width: max-content;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .tabContent {
+          .tabTitle {
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            color: #4378db;
+            width: 100%;
+
+            &:nth-child(2) {
+              padding-left: 13px;
+            }
+
+            &:nth-child(3) {
+              padding-left: 0px;
+            }
+            &:nth-child(4) {
+              display: flex;
+              align-items: center;
+              gap: 50px;
+            }
+          }
+          p {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            color: #4378db;
+
+            &:nth-child(2) {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+              letter-spacing: 0.1px;
+              color: #263238;
+              margin-top: 4px;
+            }
+          }
+          .fileDescription {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img {
+              width: 45px;
+              height: 55px;
+            }
+            .archiveFolderImg {
+              width: 46.15px !important;
+              height: 36.92px !important;
+            }
+          }
+          .fileArchives {
+            p {
+              position: relative;
+              top: -10px;
+            }
+          }
+
+          .fileShare,
+          .fileDownload {
+            button {
+              width: 92px;
+              height: 23px;
+              border: 1px solid #4378db;
+              border-radius: 100px;
+              font-weight: 700;
+              font-size: 11px;
+              line-height: 13px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: #4378db;
+              background-color: #ffffff;
+              cursor: pointer;
+            }
+          }
+          .fileDownload {
+            button {
+              width: 125px;
+            }
+          }
+          .fileDeleteOption {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            svg {
+              cursor: pointer;
+            }
+          }
+
+          table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            padding: 10px;
+            td,
+            th {
+              border-bottom: 1px solid #dddddd;
+              text-align: left;
+              padding: 10px;
+              padding-left: 16px;
+            }
+          }
+
+          @media screen and (max-width: 850px) {
+            .tabTitle {
+              width: 150px;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            .tabTitle {
+              font-size: 15px;
+            }
+            p {
+              font-size: 15px;
+              &:nth-child(2) {
+                font-size: 11px;
+              }
+            }
+            .fileShare,
+            .fileDownload {
+              button {
+                width: 92px;
+                height: 23px;
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .categories {
+      .file {
+        .header {
+          .right {
+            button {
+              width: 138px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
